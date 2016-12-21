@@ -74,7 +74,7 @@ var createLogger = require('./src/logger.js');
  *   undocumented and are subject to change without notice.
  * </p>
  *
- * This modules provides Stackdriver Error Reporting support for Node.js
+ * This module provides Stackdriver Error Reporting support for Node.js
  * applications.
  * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) is
  * a feature of Google Cloud Platform that allows in-depth monitoring and
