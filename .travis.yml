@@ -1,9 +1,15 @@
 sudo: false
+
 language: node_js
+
 node_js:
-- '0.12'
-- '4'
-- '6'
-- '7'
+  - '0.12'
+  - '4'
+  - '6'
+  - '7'
+
+env:
+  - GCLOUD_PROJECT=0
+
 script:
-- npm run-script coveralls
+  - ./bin/test.sh
