@@ -68,17 +68,30 @@ var createLogger = require('./src/logger.js');
  */
 
 /**
- * The entry point for initializing the Error Reporting Middleware. This
- * constructor will invoke configuration gathering and attempt to create a API
- * client which will send errors to the Error Reporting Service.
+ * <p class="notice">
+ *   **This is not an official Google product.** This module is experimental
+ *   and may not be ready for use.  This module uses APIs that may be
+ *   undocumented and are subject to change without notice.
+ * </p>
  *
- * The object created with this constructor can also be used manually through
- * the `report` function property, with hapi via the `hapi` object property or
- * with express via the `express` function property.
+ * This modules provides Stackdriver Error Reporting support for Node.js
+ * applications.
+ * [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/) is
+ * a feature of Google Cloud Platform that allows in-depth monitoring and
+ * viewing of errors reported by applications running in almost any environment.
+ *
+ * This module initializes the Error Reporting Middleware and provides an object
+ * that can be used manually through the `report` function property, with Hapi
+ * via the `hapi` object property or with Express via the `express` function
+ * property.
+ *
+ * @constructor
+ * @alias module:errors
+ *
+ * @resource [What is Stackdriver Error Reporting]{@link https://cloud.google.com/error-reporting/}
  *
  * @param {ConfigurationOptions} initConfiguration - the desired project/error
  *     reporting configuration
- * @constructor
  */
 function Errors(initConfiguration) {
   if (!(this instanceof Errors)){
