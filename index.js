@@ -58,7 +58,7 @@ var createLogger = require('./src/logger.js');
  */
 
 /**
- * @typedef ApplicationErrorReportingInterface
+ * @typedef Errors
  * @type Object
  * @property {Object} hapi - The hapi plugin for Stackdriver Error Reporting
  * @property {Function} report - The manual interface to report Errors to the
@@ -67,17 +67,18 @@ var createLogger = require('./src/logger.js');
  *  Reporting
  */
 
-// TODO: Update this documentation
 /**
  * The entry point for initializing the Error Reporting Middleware. This
- * function will invoke configuration gathering and attempt to create a API
- * client which will send errors to the Error Reporting Service. Invocation of
- * this function will also return an interface which can be used manually via
+ * constructor will invoke configuration gathering and attempt to create a API
+ * client which will send errors to the Error Reporting Service.
+ *
+ * The object created with this constructor can also be used manually through
  * the `report` function property, with hapi via the `hapi` object property or
  * with express via the `express` function property.
- * @function initConfiguration
+ *
  * @param {ConfigurationOptions} initConfiguration - the desired project/error
  *     reporting configuration
+ * @constructor
  */
 function Errors(initConfiguration) {
   if (!(this instanceof Errors)){
