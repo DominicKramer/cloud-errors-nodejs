@@ -1,6 +1,6 @@
 # Node.js Agent for Google Cloud Errors ChangeLog
 
-## 2017-05-11, Version 0.1.2 (Deprecated), @dominicdkramer
+## 2017-05-11, Version 0.1.2 (Deprecated), @dominickramer
 
 ### Commits
 
