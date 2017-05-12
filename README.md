@@ -1,3 +1,13 @@
+# This Module Has Been Deprecated
+
+As of version 0.1.2, this module has been deprecated and the
+[@google-cloud/error-reporting](https://www.npmjs.com/package/@google-cloud/error-reporting)
+module should be used instead.
+
+The code from this repository has been migrated to
+[google-cloud-node/error-reporting](https://github.com/GoogleCloudPlatform/google-cloud-node/tree/master/packages/error-reporting)
+and future development will continue in that repository.
+
 # Node.js module for Stackdriver Error Reporting
 
 [![NPM Version][npm-image]][npm-url]

@@ -1,5 +1,11 @@
 # Node.js Agent for Google Cloud Errors ChangeLog
 
+## 2017-05-11, Version 0.1.2 (Deprecated), @dominicdkramer
+
+### Commits
+
+* [[`fb2b9dba0f`](https://github.com/GoogleCloudPlatform/cloud-errors-nodejs/commit/fb2b9dba0f)] - update deps (#104) (Ali Ijaz Sheikh) 
+
 ## 2016-10-03, Version 0.1.0 (Experimental), @matthewloring
 
 ### Notable changes
