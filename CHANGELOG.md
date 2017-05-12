@@ -1,10 +1,26 @@
 # Node.js Agent for Google Cloud Errors ChangeLog
 
-## 2017-05-11, Version 0.1.2 (Deprecated), @dominickramer
+## 2017-05-12, Version 0.1.2 (Deprecated), @dominickramer
 
-### Commits
+This module has been renamed to [@google-cloud/error-reporting](https://www.npmjs.com/package/@google-cloud/error-reporting).
+No more releases will be made with the old module name.
 
-* [[`fb2b9dba0f`](https://github.com/GoogleCloudPlatform/cloud-errors-nodejs/commit/fb2b9dba0f)] - update deps (#104) (Ali Ijaz Sheikh) 
+The renamed module contains a number of semver-major and semver-minor changes:
+* Semver-major:
+  * The `start` method is no longer used when requiring the module.  Instead, the renamed module exports a constructor.  See the
+    [Quick Start](https://github.com/GoogleCloudPlatform/google-cloud-node/blob/master/packages/error-reporting/README.md#quick-start)
+    section of the @google-cloud/error-reporting module's README for more information.
+  * `uncaughtExceptions` need to be caught manually.  See the
+    [Catching and Reporting Application-wide Uncaught Errors](https://github.com/GoogleCloudPlatform/google-cloud-node/blob/master/packages/error-reporting/README.md#catching-and-reporting-application-wide-uncaught-errors) section of the @google-cloud/error-reporting module's README for more information.
+* Semver-minor:
+  * A new `event` method exists that can be used to build custom error messages using the builder pattern.  See the
+    [Reporting Manually](https://github.com/GoogleCloudPlatform/google-cloud-node/blob/master/packages/error-reporting/README.md#reporting-manually)
+    section of the @google-cloud/error-reporting module's README for more information.
+  * If a function is running on [Google Cloud Functions](https://cloud.google.com/functions/), and the `serviceContext.service` has
+    not been manually specified, the function's name will be used as the `service` that will be displayed in the Stackdriver Error
+    Reporting console.  See the
+    [Configuration](https://github.com/GoogleCloudPlatform/google-cloud-node/blob/master/packages/error-reporting/README.md#configuration)
+    section of the @google-cloud/error-reporting module's README for more information on configuring the module.
 
 ## 2016-10-03, Version 0.1.0 (Experimental), @matthewloring
 
